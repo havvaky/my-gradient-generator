@@ -7,16 +7,16 @@ import Head from 'next/head';
 
 
 export default function Home() {
-  const [borderValue, setBorderValue] = useState(30);
+  const [borderValue, setBorderValue] = useState(25);
   const [width, setWidth] = useState(450);
   const [height, setHeight] = useState(450);
   const [hue, setHueChange] = useState(288);
   const [saturation, setSaturationChange] = useState(35);
-  const [lightness, setLightnessChange] = useState(80);
+  const [lightness, setLightnessChange] = useState(70);
   const [opacity, setOpacityChange] = useState(0.7);
-  const [offsetX, setOffsetX] = useState(30);
-  const [offsetY, setOffsetY] = useState(30);
-  const [blur, setBlur] = useState(45);
+  const [offsetX, setOffsetX] = useState(21);
+  const [offsetY, setOffsetY] = useState(11);
+  const [blur, setBlur] = useState(34);
   const [spread, setSpread] =useState(0);
   const [checked, setChecked] = useState(false);
 
@@ -61,7 +61,6 @@ export default function Home() {
   }
 
   function handleSpread(e) {
-    console.log(e.target.value);
     setSpread(e.target.value);
   }
 
@@ -71,8 +70,6 @@ export default function Home() {
 
   return (
     <>
-      <Layout home>
-        <Head><title>Neumorphic Box Shadows</title></Head>
         <div className={styles.wrapper} style={{ backgroundColor: `hsla(${hue}, ${saturation}%, ${lightness}%, ${opacity})`}}>
           <div className={styles.pageTitle}><h1>Neumorphic Box Shadows</h1></div>
           <div className={styles.boxWrap}>
@@ -83,9 +80,9 @@ export default function Home() {
                   width: `${width}px`,
                   height: `${height}px`,
                   backgroundColor: `hsla(${hue}, ${saturation}%, ${lightness}%, ${opacity})`,
-                  boxShadow:  checked ? `inset ${offsetX}px ${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness+10}%),
-            -${offsetX}px -${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness-5}%)` : `${offsetX}px ${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness+10}%),
-            -${offsetX}px -${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness-5}%)`
+                  boxShadow:  checked ? `inset ${offsetX}px ${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness-20}%),
+            -${offsetX}px -${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, 100%)` : `${offsetX}px ${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness-20}%),
+            -${offsetX}px -${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, 100%)`
                 }}/>
             </div>
             <div className={styles.inputBox}>
@@ -172,9 +169,9 @@ export default function Home() {
                   onChange={handleOpacityChange}
                 />
                 <p>
-                  <code>box-shadow: {checked ? `inset ${offsetX}px ${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness+20}%),
-            -${offsetX}px -${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness-20}%)` : `${offsetX}px ${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness+20}%),
-            -${offsetX}px -${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness-20}%)`};</code>
+                  <code>box-shadow: {checked ? `inset ${offsetX}px ${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness-20}%),
+            -${offsetX}px -${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, 100%)` : `${offsetX}px ${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, ${lightness-20}%),
+            -${offsetX}px -${offsetY}px ${blur}px ${spread}px hsl(${hue}, ${saturation}%, 100%)`};</code>
                 </p>
                 <label htmlFor="offset-x">offset-x: </label>
                 <input
@@ -224,7 +221,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Layout>
     </>
   )
 }
