@@ -1,5 +1,10 @@
 .container {
+<<<<<<< HEAD
     min-height: 100vh;
+=======
+    height: 100%;
+    width: 100%;
+>>>>>>> 817e515c36c52f235cc2fcdfecaf33675fb647bd
     display: flex;
     justify-content: center;
     align-items: center;
