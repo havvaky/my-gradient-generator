@@ -1,0 +1,88 @@
+.container, .wrapper, .button, .colorContainer , .brush{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper {
+    flex-direction: column;
+}
+
+.color {
+  line-height: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 5px 0 rgb(103 103 103 / 75%);
+  margin: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.colorLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.brush {
+  justify-content: flex-end;
+
+}
+
+.colorPicker{
+  position: absolute;
+  opacity: 0.01;
+  width: 6.8rem;
+  padding-top: 2.2rem;
+}
+
+.randomColorButton {
+    line-height: 2rem;
+    padding: 0 1rem;
+    margin: 15px;
+    border: none;
+    border-radius: 30px;
+    background: floralwhite;
+    box-shadow: 3px 3px 5px 0 rgb(103 103 103 / 75%);
+    font-size: 20px;
+    color: black;
+    font-family: 'Varela Round', sans-serif;
+    transition: box-shadow .2s ease-in-out .2s;
+}
+
+.randomColorButton:hover {
+  color: #00bfa5;
+  background-color: darken(white, 10%);
+  transition: all .3s;
+}
+.randomColorButton:active {
+  box-shadow: inset 3px 3px 3px rgb(103 103 103 / 75%);
+}
+
+.colorContainer, .randomColorButton, .code {
+  animation: expand .8s ease-in-out;
+}
+
+@keyframes expand {
+from {
+  transform: scaleX(0);
+}
+to {
+  transform: scaleX(1);
+}
+}
+
