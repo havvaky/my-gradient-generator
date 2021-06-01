@@ -7,7 +7,7 @@ import BrushIcon from '@material-ui/icons/Brush';
 export default function Home() {
 
 
-  const [color1, setColor1] = useState("#608efb");
+  const [color1, setColor1] = useState("#04cdca");
   const [color2, setColor2] = useState("#d763f8");
 
 
