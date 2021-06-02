@@ -15,8 +15,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 @-webkit-keyframes text-focus-in {
@@ -41,8 +41,8 @@
     margin: 0.6rem;
     font-size: 3.2rem;
     letter-spacing: 0.1rem;
-    -webkit-animation: text-shadow-pop-br 4.7s both;
-    animation: text-shadow-pop-br 4.7s both;
+    -webkit-animation: text-shadow-pop-br 1.8s both;
+     animation: text-shadow-pop-br 1.8s both;
 }
 
 /**
@@ -52,12 +52,12 @@
  */
 @-webkit-keyframes text-shadow-pop-br {
   0% {
-    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
     -webkit-transform: translateX(0) translateY(0);
     transform: translateX(0) translateY(0);
   }
   100% {
-    text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555, 4px 4px #555555, 5px 5px #555555, 6px 6px #555555, 7px 7px #555555, 8px 8px #555555;
+    text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555, 4px 4px #555555, 5px 5px #555555, 6px 6px #555555, 7px 7px #555555;
     -webkit-transform: translateX(-8px) translateY(-8px);
     transform: translateX(-8px) translateY(-8px);
   }
@@ -119,7 +119,6 @@
   padding: 0.5em;
   background: #6b6b6b6e;
   border-radius: 5px;
-  border-left: 2px solid floralwhite;
 }
 
 .copyButton {
