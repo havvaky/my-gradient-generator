@@ -13,7 +13,6 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;1,200&family=Varela+Round&display=swap" rel="stylesheet"/>
-          <title>My Gradient Generator</title>
         </Head>
         <body>
         <Main />
